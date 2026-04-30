@@ -1,7 +1,42 @@
-@use 'partial'; /*Partial fil hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
+@use 'variabler'; 
+@use 'mixins'; 
+
+/*^@use filerne hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
 
 
+.header-navigation{
 
+    #bars{
+        display: none;
+    }
+
+    #menu {
+        @include mixins.style-body-text;
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        justify-content: center;
+
+        li a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    /*Resposnivitet - Mobil version*/
+@media (max-width: 768px){
+
+    #bars{
+        display: block;
+    }
+
+    #menu{
+        display: none;
+    }
+
+}
+
+}
 
 
 

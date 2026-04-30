@@ -1,3 +1,57 @@
-/*# sourceMappingURL=style.css.map */
-
 @charset "UTF-8";
+/*Variabler*/
+/*lyseblå*/
+/*lys beige*/
+/*mørke blå*/
+/*hvid*/
+/*Sort*/
+/*Gul*/
+/*Gør at alle variabler kan kaldes på efter variabler*/
+/*Mixins til skrifttyper*/
+/*Mixin til hovedoverskrifttype - 'Spartan'*/
+/*Mixin til underoverskrifttype - 'Spartan'*/
+/*Mixin til brødteksttype - 'Nunito'*/
+/*Mixin til knap teksttype - 'Nunito'*/
+/*^@use filerne hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
+.header-navigation #bars {
+  display: none;
+}
+.header-navigation #menu {
+  font-family: "Nunito";
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  justify-content: center;
+}
+.header-navigation #menu li a {
+  color: black;
+  text-decoration: none;
+}
+.header-navigation {
+  /*Resposnivitet - Mobil version*/
+}
+@media (max-width: 768px) {
+  .header-navigation #bars {
+    display: block;
+  }
+  .header-navigation #menu {
+    display: none;
+  }
+}
+
+/*Skip to main content code snippet fra:https://www.a11y-collective.com/blog/skip-to-main-content/ */
+.screen-reader-text {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+}
+
+.screen-reader-text:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */

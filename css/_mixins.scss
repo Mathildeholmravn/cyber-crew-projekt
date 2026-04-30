@@ -1,0 +1,27 @@
+
+@use 'variabler' as *; /*Gør at alle variabler kan kaldes på efter variabler*/
+
+/*Mixins til skrifttyper*/
+
+/*Mixin til hovedoverskrifttype - 'Spartan'*/
+@mixin style-headline {
+    font-family: $headline-font;
+    font-weight: 300;
+}
+
+/*Mixin til underoverskrifttype - 'Spartan'*/
+@mixin style-subheadline{
+    font-family: $subheadline-font;
+}
+
+/*Mixin til brødteksttype - 'Nunito'*/
+@mixin style-body-text {
+    font-family: $body-text-font;
+}
+
+/*Mixin til knap teksttype - 'Nunito'*/
+@mixin style-btn-font {
+    font-family: $btn-font;
+    color: $text-color-black;
+}
+
