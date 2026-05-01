@@ -4,9 +4,10 @@
 /*Mixins til skrifttyper*/
 
 /*Mixin til hovedoverskrifttype - 'Spartan'*/
-@mixin style-headline {
+@mixin style-headline ($size){
     font-family: $headline-font;
     font-weight: 300;
+    font-size: $size;
 }
 
 /*Mixin til underoverskrifttype - 'Spartan'*/
