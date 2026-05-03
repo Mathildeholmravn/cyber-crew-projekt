@@ -1,14 +1,14 @@
 const btns = document.querySelectorAll(".btn");
 const stages = document.querySelectorAll(".stage");
-const main = document.querySelector(".scenario-main"); /*forælder til .stage*/ 
+const main = document.querySelector(".scenario-main");
 
 
-
+/* Funktion der opdaterer UI */
 const updateUI = (h3Text, pText, btnsText, imgPath) => {
 
 
 
-/* Hvad kalder man mon nedenstående del? */
+/* Sektioner */
     const section = document.createElement("section");
     section.classList.add("stage");
     section.classList.add("active"); 
@@ -58,14 +58,14 @@ case "START SCENARIE NU":
     btnsText = [
     "Jeg reagerer hurtigt og klikker på linket.",
     "E-mailen virker mistænkelig - Jeg ignorerer den bare.",
-    "Jeg sikrer mig at e-mailen ikke er falsk. Hellerer være på den sikre side!"]
+    "Jeg sikrer mig at e-mailen ikke er falsk. Hellere være på den sikre side!"]
 
     imgPath = "img/forstørrelsesglasscenarie.png";
     break; 
 
 /* STAGE 1 - Klik på link */
 case "Jeg reagerer hurtigt og klikker på linket.":
-        h3Text = "DU KLIKkER PÅ LINKET!";
+        h3Text = "DU KLIKKER PÅ LINKET!";
         pText = "Du klikker på linket i mailen. Her bliver du bedt om at indtaste dine login-oplysninger. Indtaster du dine login-oplysninger?";
         btnsText = [
             "Du indtaster de nødvendige oplysninger.",
@@ -76,7 +76,7 @@ case "Jeg reagerer hurtigt og klikker på linket.":
 
 /* STAGE 2 - Tjek af detaljer */
 case "Jeg sikrer mig at e-mailen ikke er falsk. Hellere være på den sikre side!":
-        h3Text = "DETETKTIV MODE";
+        h3Text = "DETEKTIV MODE";
         pText = "Du tjekker om: Afsenderens e-mail adresse virker officiel og troværdig, sproget virker autogenereret eller mangelfuldt, virker mailen presserende og truende? og bliver du bedt om at videre give følsomme oplysninger?\n\nE-mailen opfylder alle ovenstående punkter og du konkluderer at e-mailen må være falsk. Hvad gør du nu?";
         btnsText = [
             "Jeg har ikke tænkt mig at åbne dette link!Jeg ignorerer mailen og kommer videre med min dag.",
@@ -112,7 +112,7 @@ case "Jeg ignorerer mailen og kommer videre med min dag.":
     h3Text = "DU ER SIKKER!";
     pText = "Du er stadig sikker! Men dine medstuderende er måske ikke.\n\nHer er nogle tips:\n• Husk at være skeptisk over for mails der presser dig\n• Check altid afsenderens e-mail adresse\n• Se efter stavefejl og autogenereret sprog\n\nBliv en del af Cyber Crew. Sammen passer vi på hinanden.";
     btnsText = ["START FORFRA"];
-    imgPath = "img/håndeklapper-ikon.png";
+    imgPath = "img/haenderklapperikonscenarie.png";
     break;
 
 
@@ -121,7 +121,7 @@ case "Forbandet svindlere! Jeg må sørge for at anmelde e-mailen!":
     h3Text = "DU ER SIKKER! GODT KLARET";
     pText = "Ved at anmelde e-mailen blev phising-kampangen stoppet og du hjalp med at beskytte dine medstuderende!\n\nDu har nu en vigtig rolle i at sikre vores fælles cyber-fremtid.\n\nBliv en del af Cyber Crew. Vi hjælper hinanden til en sikker cyber fremtid.";
     btnsText = ["START FORFRA"];
-    imgPath = "img/håndeklapper-ikon.png";
+    imgPath = "img/haenderklapperikonscenarie.png";
     break;
 
 /* Start forfra */
@@ -131,7 +131,7 @@ case "START FORFRA":
     btnsText = [
     "Jeg reagerer hurtigt og klikker på linket.",
     "E-mailen virker mistænkelig - Jeg ignorerer den bare.",
-    "Jeg sikrer mig at e-mailen ikke er falsk. Hellerer være på den sikre side!"]
+    "Jeg sikrer mig at e-mailen ikke er falsk. Hellere være på den sikre side!"]
 
     imgPath = "img/forstørrelsesglasscenarie.png";
     break; 
@@ -139,6 +139,11 @@ case "START FORFRA":
     }   
      updateUI(h3Text, pText, btnsText, imgPath);
 }       
+
+for (const btn of btns) {
+    console.log("Tilføjer listener til knap:", btn.textContent);
+    btn.addEventListener("click", nextStage);
+}
     
 
 
