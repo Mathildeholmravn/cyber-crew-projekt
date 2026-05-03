@@ -11,17 +11,26 @@
 }
 
 /*Mixin til underoverskrifttype - 'Spartan'*/
-@mixin style-subheadline{
+@mixin h1($size){
     font-family: $subheadline-font;
+    font-size: $size;
 }
 
 /*Mixin til brødteksttype - 'Nunito'*/
-@mixin style-body-text {
+@mixin p{
     font-family: $body-text-font;
 }
 
 /*Mixin til knap teksttype - 'Nunito'*/
-@mixin style-btn-font {
+@mixin btn-styling {
+    border: 4px dotted;
+    border-radius: 10px;
+    background-color: $btn-color;
+    background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
+    font-size: 20px;
+}
+
+@mixin btn-font-styling {
     font-family: $btn-font;
     color: $text-color-black;
 }

@@ -3,6 +3,42 @@
 
 /*^@use filerne hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
 
+body{
+    overflow-x: hidden;
+}
+
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+    gap: 10px;
+}
+
+
+/*Header*/
+
+.header-1, .header-2 {
+    background-color: variabler.$nav-color;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: -15px;
+}
+
+.header-1 { z-index: 3; }
+.header-2 { z-index: 2; }
+
+.header-1 img{
+    width: 350px;
+}
 
 .header-navigation{
 
@@ -11,19 +47,92 @@
     }
 
     #menu {
-        @include mixins.style-body-text;
+        @include mixins.p;
         display: flex;
         list-style: none;
         gap: 50px;
         justify-content: center;
 
         li a {
-            color: black;
+            color: variabler.$text-color-white;
             text-decoration: none;
         }
     }
 
-    /*Resposnivitet - Mobil version*/
+    #menu a:hover {
+        color: variabler.$accent-color; /*gul ved hover*/
+    }
+
+    #menu a:active {
+        color: variabler.$bg-color;
+    }
+}
+/* Hero */
+
+.hero {
+    background-color: variabler.$mørke-blå;
+    padding: 60px 20px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text{
+    flex: 3; /*3/5 af pladsen*/
+}
+
+.hero-ikon{
+    flex: 2; /*2/5 af pladsen*/
+}
+
+.hero h1{
+    @include mixins.h1(50px);
+    color: variabler.$accent-color;
+    margin: 40px 0;
+    padding-left: 70px;
+}
+
+.hero p{
+    @include mixins.p;
+    color: variabler.$text-color-white;
+    padding-left: 70px;
+}
+
+.hero-ikon img{
+    width: 450px;
+}
+
+.hero-btns {
+    display: flex;
+    padding-left: 70px;
+}
+
+.hero-btns button{
+    @include mixins.btn-styling;
+    background-color: variabler.$btn-color;
+    padding: 12px 24px;
+
+    @include mixins.btn-font-styling;
+    border-color: variabler.$accent-color;
+}
+
+.hero-text-1 {
+    font-size: 15px;
+}
+
+.hero-text-2{
+    font-size: 22px;
+}
+
+/*------------------------------------------------*/
+/*Resposnivitet - Mobil version*/
 @media (max-width: 768px){
 
     #bars{
@@ -35,11 +144,6 @@
     }
 
 }
-
-}
-
-
-
 
 
 /*Skip to main content code snippet fra:https://www.a11y-collective.com/blog/skip-to-main-content/ */

@@ -2,6 +2,8 @@
 /*Variabler*/
 /*lyseblå*/
 /*lys beige*/
+/*lys beige*/
+/*mørke blå*/
 /*mørke blå*/
 /*hvid*/
 /*Sort*/
@@ -13,6 +15,45 @@
 /*Mixin til brødteksttype - 'Nunito'*/
 /*Mixin til knap teksttype - 'Nunito'*/
 /*^@use filerne hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
+body {
+  overflow-x: hidden;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 100%;
+  gap: 10px;
+}
+
+/*Header*/
+.header-1, .header-2 {
+  background-color: #384767;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-bottom: -15px;
+}
+
+.header-1 {
+  z-index: 3;
+}
+
+.header-2 {
+  z-index: 2;
+}
+
+.header-1 img {
+  width: 350px;
+}
+
 .header-navigation #bars {
   display: none;
 }
@@ -24,23 +65,95 @@
   justify-content: center;
 }
 .header-navigation #menu li a {
-  color: black;
+  color: #FFFFFF;
   text-decoration: none;
 }
+.header-navigation #menu a:hover {
+  color: #FFE53B; /*gul ved hover*/
+}
+.header-navigation #menu a:active {
+  color: #C5D6F9;
+}
 
-/*.header-navigation {
-  /*Resposnivitet - Mobil version
-} */
+/* Hero */
+.hero {
+  background-color: #384767;
+  padding: 60px 20px;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  z-index: 1;
+}
 
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 3; /*3/5 af pladsen*/
+}
+
+.hero-ikon {
+  flex: 2; /*2/5 af pladsen*/
+}
+
+.hero h1 {
+  font-family: "League Spartan";
+  font-size: 50px;
+  color: #FFE53B;
+  margin: 40px 0;
+  padding-left: 70px;
+}
+
+.hero p {
+  font-family: "Nunito";
+  color: #FFFFFF;
+  margin: 40px;
+  padding-left: 70px;
+}
+
+.hero-ikon img {
+  width: 450px;
+}
+
+.hero-btns {
+  display: flex;
+  padding-left: 70px;
+}
+
+.hero-btns button {
+  border: 4px dotted;
+  border-radius: 10px;
+  background-color: #FFFBF0;
+  background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
+  font-size: 20px;
+  background-color: #FFFBF0;
+  padding: 12px 24px;
+  font-family: "Nunito";
+  color: #000000;
+  border-color: #FFE53B;
+}
+
+.hero-text-1 {
+  font-size: 15px;
+}
+
+.hero-text-2 {
+  font-size: 22px;
+}
+
+/*------------------------------------------------*/
+/*Resposnivitet - Mobil version*/
 @media (max-width: 768px) {
-  .header-navigation #bars {
+  #bars {
     display: block;
   }
-  .header-navigation #menu {
+  #menu {
     display: none;
   }
 }
-
 /*Skip to main content code snippet fra:https://www.a11y-collective.com/blog/skip-to-main-content/ */
 .screen-reader-text {
   position: absolute;
