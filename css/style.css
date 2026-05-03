@@ -7,16 +7,19 @@
 /*mørke blå*/
 /*hvid*/
 /*Sort*/
+/*Mørk beige*/
 /*Gul*/
 /*Gør at alle variabler kan kaldes på efter variabler*/
 /*Mixins til skrifttyper*/
 /*Mixin til hovedoverskrifttype - 'Spartan'*/
 /*Mixin til underoverskrifttype - 'Spartan'*/
+/* Mixin til h3*/
 /*Mixin til brødteksttype - 'Nunito'*/
 /*Mixin til knap teksttype - 'Nunito'*/
 /*^@use filerne hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
 body {
   overflow-x: hidden;
+  background-color: #C5D6F9;
 }
 
 .header-container {
@@ -36,8 +39,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 40px 40px;
   position: relative;
   margin-bottom: -15px;
 }
@@ -78,10 +81,11 @@ body {
 /* Hero */
 .hero {
   background-color: #384767;
-  padding: 60px 20px;
-  border-radius: 0 0 20px 20px;
+  padding: 30px 20px;
   position: relative;
   z-index: 1;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 40px 40px;
 }
 
 .hero-container {
@@ -93,6 +97,7 @@ body {
 
 .hero-text {
   flex: 3; /*3/5 af pladsen*/
+  align-self: flex-start;
 }
 
 .hero-ikon {
@@ -101,17 +106,18 @@ body {
 
 .hero h1 {
   font-family: "League Spartan";
+  font-weight: 300;
   font-size: 50px;
   color: #FFE53B;
-  margin: 40px 0;
-  padding-left: 70px;
+  margin-left: 70px;
+  margin-top: 40px;
 }
 
 .hero p {
   font-family: "Nunito";
   color: #FFFFFF;
-  margin: 40px;
-  padding-left: 70px;
+  margin-left: 70px;
+  margin-top: 40px;
 }
 
 .hero-ikon img {
@@ -120,15 +126,18 @@ body {
 
 .hero-btns {
   display: flex;
-  padding-left: 70px;
+  margin-left: 70px;
+  margin-top: 40px;
+  gap: 50px;
 }
 
 .hero-btns button {
   border: 4px dotted;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #FFFBF0;
   background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
   font-size: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
   background-color: #FFFBF0;
   padding: 12px 24px;
   font-family: "Nunito";
@@ -142,6 +151,174 @@ body {
 
 .hero-text-2 {
   font-size: 22px;
+}
+
+/* Informations sektion */
+.information {
+  background-color: #FFFBF0;
+  margin-top: -50px;
+  z-index: 4;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 40px 40px;
+}
+
+.information-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* To kollonner*/
+  gap: 80px; /* Luft mellem de to kollonner*/
+  max-width: 100%;
+  margin: 0 auto; /* Er ikke helt sikker...*/
+  padding: 120px 80px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.info-box,
+.info-box-blog,
+.info-box-sad-fact {
+  background-color: #F9EAC5;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  border: 4px dotted #384767;
+  border-radius: 40px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+.info-box h2,
+.info-box-blog h2,
+.info-box-sad-fact h2 {
+  font-family: "League Spartan";
+  font-size: 24px;
+  font-weight: 300;
+  color: #000000;
+  padding: 10px 30px 0 30px;
+}
+
+.info-box p,
+.info-box-blog p,
+.info-box-sad-fact p {
+  font-family: "Nunito";
+  color: #000000;
+  padding: 10px 30px 10px 30px;
+}
+
+.info-box img,
+.info-box-blog img,
+.info-box-sad-fact img {
+  width: 100%;
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.info-btn {
+  align-self: flex-start;
+  background-color: #C5D6F9;
+  margin-bottom: 20px;
+}
+
+/* Skille sektion */
+.banner {
+  margin: 80px 0 80px 0;
+}
+
+.banner h2 {
+  font-family: "League Spartan";
+  font-size: 35px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hvad er et scenarie sektion*/
+.scenario-info {
+  background-color: #FFFBF0;
+  padding-top: 80px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 0 0;
+}
+
+.scenario-info-container h2 {
+  font-family: "League Spartan";
+  font-size: 35px;
+  font-weight: 300;
+  margin: -100px 0 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.scenario-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Luft mellem de tre rækker*/
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 120px 80px;
+}
+
+.scenario-info-box {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: #F9EAC5;
+  padding: 20px;
+  border: 4px dotted;
+  border-radius: 20px;
+  background-color: #FFFBF0;
+  background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
+  font-size: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  background-color: #F9EAC5;
+}
+
+.scenario-info-icon {
+  width: 100%;
+  max-width: 180px;
+}
+
+.scenario-info-text h3 {
+  font-family: "League Spartan";
+}
+
+.scenario-info-text p {
+  font-family: "Nunito";
+  color: #000000;
+}
+
+/* Phishing scenarie */
+.scenario-main {
+  background-color: #384767;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 0 0;
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+}
+
+.scenario-main h2 {
+  font-family: "League Spartan";
+  font-size: 35px;
+  font-weight: 300;
+  color: #FFE53B;
+}
+
+.scenario-main h3 {
+  font-family: "League Spartan";
+}
+
+.scenario-main p {
+  font-family: "Nunito";
+  color: #FFFFFF;
 }
 
 /*------------------------------------------------*/

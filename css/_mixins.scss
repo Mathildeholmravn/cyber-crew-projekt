@@ -4,15 +4,22 @@
 /*Mixins til skrifttyper*/
 
 /*Mixin til hovedoverskrifttype - 'Spartan'*/
-@mixin style-headline ($size){
+@mixin h1($size){
     font-family: $headline-font;
     font-weight: 300;
     font-size: $size;
 }
 
 /*Mixin til underoverskrifttype - 'Spartan'*/
-@mixin h1($size){
+@mixin h2($size){
     font-family: $subheadline-font;
+    font-size: $size;
+    font-weight: 300;
+}
+
+/* Mixin til h3*/
+@mixin h3($size){
+    font-family: $h3-font;
     font-size: $size;
 }
 
@@ -24,14 +31,31 @@
 /*Mixin til knap teksttype - 'Nunito'*/
 @mixin btn-styling {
     border: 4px dotted;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: $btn-color;
     background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
     font-size: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
 }
 
 @mixin btn-font-styling {
     font-family: $btn-font;
     color: $text-color-black;
 }
+
+@mixin section-design-bottom {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 40px 40px;
+}
+
+@mixin section-design-top {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 40px 40px 0 0;
+}
+
+@mixin section-design-top-bottom {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    border-radius: 40px 40px 40px 40px;
+}
+
 
