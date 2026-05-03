@@ -445,6 +445,112 @@ body {
   margin: 40px 0 40px 40px;
 }
 
+/*Kontaktform*/
+.section-contactform h2 {
+  font-family: "League Spartan";
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contactform {
+  background-color: #F9EAC5;
+  width: 80%;
+  padding: 20px 0 0 0;
+  margin: 4em auto; /*margin og auto er med til at cebtrere blokelementet form*/
+}
+.contactform h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+}
+.contactform p {
+  margin-left: 1em;
+}
+.contactform .section-form {
+  display: flex;
+}
+.contactform {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 40px 40px;
+}
+
+.contactform h2 {
+  margin-bottom: 60px;
+}
+
+.contactform p {
+  font-family: "Nunito";
+  font-size: 20px;
+  margin: 0 40px 0 40px;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+  font-family: "Nunito";
+  font-size: 20px;
+  width: 80%;
+  padding: 1em;
+  margin: 0.5em 1em 1em 1em;
+  box-sizing: border-box; /*hjælper med at stille kasserne*/
+  font-family: "Nunito";
+  color: #000000;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 40px 40px;
+}
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
+  color: #000000;
+}
+input[type=text]::placeholder, input[type=email]::placeholder, input[type=tel]::placeholder, select::placeholder, textarea::placeholder {
+  color: #000000;
+}
+input[type=text] input[type=submit], input[type=email] input[type=submit], input[type=tel] input[type=submit], select input[type=submit], textarea input[type=submit] {
+  border: 4px dotted;
+  border-radius: 40px;
+  background-color: #FFFBF0;
+  background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
+  font-size: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  width: 100%;
+  margin: 0 1em;
+  cursor: pointer; /*lille tilgængeligheds detalje*/
+}
+input[type=text] input[type=submit]:hover, input[type=email] input[type=submit]:hover, input[type=tel] input[type=submit]:hover, select input[type=submit]:hover, textarea input[type=submit]:hover {
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.visually-hidden { /*a11y-collective class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Footer */
+/*Footer 1*/
+footer:nth-of-type(1) {
+  grid-column: 1/3;
+  background-color: #FFE53B;
+  display: grid;
+  grid-template-columns: 2, 1fr;
+  padding: 0 60px 0 60px;
+}
+footer:nth-of-type(1) p, footer:nth-of-type(1) h3 {
+  color: #000000;
+  font-family: "Nunito";
+  font-size: 20px;
+  font-style: normal; /*Adress tilføjer selv 'kursiv'*/
+}
+footer:nth-of-type(1) img {
+  width: 350px;
+}
+
 /*------------------------------------------------*/
 /*Resposnivitet - Mobil version*/
 @media (max-width: 768px) {
