@@ -270,10 +270,11 @@ body{
 /* Phishing scenarie */
 .scenario-main {
     background-color: variabler.$mørke-blå;
-    @include mixins.section-design-top;
+    @include mixins.section-design-top-bottom;
     margin-top: -50px;
     position: relative;
     z-index: 1;
+    padding: 20px;
 }
 
 .scenario-main h2 {
@@ -287,10 +288,101 @@ body{
 }
 
 .scenario-main p{
-    @include mixins.p(25px);
+    @include mixins.p;
     color: variabler.$text-color-white;
 }
 
+.stage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: 60px;
+    max-width: 80%;
+    margin: 0 auto;
+    
+}
+
+.stage img{
+    grid-column: 1;
+    grid-row: 1/-1;
+    order: 1;
+    max-width: 300px;
+    align-self: center;
+    justify-self: center;
+}
+
+.stage h2, .stage h3, .stage p, .stage button{
+    grid-column: 2;
+}
+
+.stage h2{
+    @include mixins.h2(24px);
+}
+
+.stage p{
+    @include mixins.p;
+    text-align: left
+}
+
+.stage button{
+    @include mixins.btn-styling;
+    padding: 12px 24px;
+    font-family: variabler.$body-text-font;
+}
+
+/* Phishing scenarie */
+
+.phishing-info{
+    background-color: variabler.$primary-color;
+    padding: 60px 20px;
+    @include mixins.section-design-top-bottom;
+}
+
+.phishing-info h2{
+    @include mixins.h2(32px);
+    text-align: center;
+    color: variabler.$text-color-black;
+    margin-bottom: 40px;
+}
+
+.phishing-info p{
+    @include mixins.p;
+    text-align: center;
+    margin: 0 auto 60px;
+;
+    max-width: 70%;
+}
+
+.tips-and-tricks-section{
+    background-color: variabler.$box-color;
+    @include mixins.section-design-top-bottom;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.tips-and-tricks-section h3{
+    @include mixins.h3(35px);
+    padding-left: 40px;
+}
+
+.tips-and-tricks-section p{
+    @include mixins.p;
+}
+
+.tips-and-tricks-section ul{
+    list-style: none;
+}
+
+.tips-and-tricks-section li{
+    @include mixins.p;
+}
+
+.tips-and-tricks-section button{
+    @include mixins.btn-styling;
+    @include mixins.btn-font-styling;
+    margin: 40px 0 40px 40px;
+}
 
 /*------------------------------------------------*/
 /*Resposnivitet - Mobil version*/
@@ -305,8 +397,6 @@ body{
     }
 
 }
-
-
 
 
 /*Skip to main content code snippet fra:https://www.a11y-collective.com/blog/skip-to-main-content/ */

@@ -62,6 +62,7 @@ body {
 }
 .header-navigation #menu {
   font-family: "Nunito";
+  font-size: 20px;
   display: flex;
   list-style: none;
   gap: 50px;
@@ -115,6 +116,7 @@ body {
 
 .hero p {
   font-family: "Nunito";
+  font-size: 20px;
   color: #FFFFFF;
   margin-left: 70px;
   margin-top: 40px;
@@ -133,11 +135,12 @@ body {
 
 .hero-btns button {
   border: 4px dotted;
-  border-radius: 20px;
+  border-radius: 40px;
   background-color: #FFFBF0;
   background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
   font-size: 20px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
   background-color: #FFFBF0;
   padding: 12px 24px;
   font-family: "Nunito";
@@ -208,6 +211,7 @@ body {
 .info-box-blog p,
 .info-box-sad-fact p {
   font-family: "Nunito";
+  font-size: 20px;
   color: #000000;
   padding: 10px 30px 10px 30px;
 }
@@ -273,11 +277,12 @@ body {
   background-color: #F9EAC5;
   padding: 20px;
   border: 4px dotted;
-  border-radius: 20px;
+  border-radius: 40px;
   background-color: #FFFBF0;
   background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
   font-size: 20px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
   background-color: #F9EAC5;
 }
 
@@ -288,21 +293,24 @@ body {
 
 .scenario-info-text h3 {
   font-family: "League Spartan";
+  font-size: 35px;
 }
 
 .scenario-info-text p {
   font-family: "Nunito";
+  font-size: 20px;
   color: #000000;
 }
 
 /* Phishing scenarie */
 .scenario-main {
   background-color: #384767;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  border-radius: 40px 40px 0 0;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 40px 40px;
   margin-top: -50px;
   position: relative;
   z-index: 1;
+  padding: 20px;
 }
 
 .scenario-main h2 {
@@ -314,11 +322,127 @@ body {
 
 .scenario-main h3 {
   font-family: "League Spartan";
+  font-size: 30px;
+  color: #FFFFFF;
 }
 
 .scenario-main p {
   font-family: "Nunito";
+  font-size: 20px;
   color: #FFFFFF;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  padding: 60px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.stage img {
+  grid-column: 1;
+  grid-row: 1/-1;
+  order: 1;
+  max-width: 300px;
+  align-self: center;
+  justify-self: center;
+}
+
+.stage h2, .stage h3, .stage p, .stage button {
+  grid-column: 2;
+}
+
+.stage h2 {
+  font-family: "League Spartan";
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.stage p {
+  font-family: "Nunito";
+  font-size: 20px;
+  text-align: left;
+}
+
+.stage button {
+  border: 4px dotted;
+  border-radius: 40px;
+  background-color: #FFFBF0;
+  background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
+  font-size: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  padding: 12px 24px;
+  font-family: "Nunito";
+}
+
+/* Phishing scenarie */
+.phishing-info {
+  background-color: #FFFBF0;
+  padding: 60px 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 40px 40px;
+}
+
+.phishing-info h2 {
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.phishing-info p {
+  font-family: "Nunito";
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto 60px;
+  max-width: 70%;
+}
+
+.tips-and-tricks-section {
+  background-color: #F9EAC5;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 40px 40px;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.tips-and-tricks-section h3 {
+  font-family: "League Spartan";
+  font-size: 35px;
+  padding-left: 40px;
+}
+
+.tips-and-tricks-section p {
+  font-family: "Nunito";
+  font-size: 20px;
+}
+
+.tips-and-tricks-section ul {
+  list-style: none;
+}
+
+.tips-and-tricks-section li {
+  font-family: "Nunito";
+  font-size: 20px;
+}
+
+.tips-and-tricks-section button {
+  border: 4px dotted;
+  border-radius: 40px;
+  background-color: #FFFBF0;
+  background-clip: padding-box; /* Gør at baggrunden stopper ved border*/
+  font-size: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  font-family: "Nunito";
+  color: #000000;
+  margin: 40px 0 40px 40px;
 }
 
 /*------------------------------------------------*/
