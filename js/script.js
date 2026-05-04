@@ -1,3 +1,12 @@
+/* Burger Menu Toggle */
+const bars = document.getElementById("bars");
+const menu = document.getElementById("menu");
+
+bars.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    bars.setAttribute("aria-expanded", menu.classList.contains("active"));
+});
+
 const btns = document.querySelectorAll(".btn");
 const stages = document.querySelectorAll(".stage");
 const main = document.querySelector(".scenario-main");

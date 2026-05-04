@@ -550,12 +550,167 @@ footer:nth-of-type(2){
 /*Resposnivitet - Mobil version*/
 @media (max-width: 768px){
 
-    #bars{
+    /*body*/
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /*Header*/
+    .header-1 img {
+        width: 150px;
+        margin-left: 120px;
+    }
+
+    .header-1, .header-2 {
+        display: inline-block; /*ligger ved siden af hinanden*/
+        width: 100%;
+        padding: 15px;
+    }
+
+
+   .header-navigation #bars{
         display: block;
+        background-color: transparent;
+        border: none;
+        color: variabler.$text-color-white;
+        font-size: 28px;
+        max-width: 100%;
     }
 
     #menu{
         display: none;
+        position: absolute;
+        width: 100%;
+        top: 80%;
+        flex-direction: column;
+        background-color: variabler.$nav-color;
+    }
+
+    #menu.active{
+        display: none;
+    }
+
+      /*Hero*/
+
+       .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero-btns {
+        margin-left: 0;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /*Informationsbokse*/
+
+    .information-container {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .info-column {
+        margin: 0;
+        gap: 40px;
+    }
+
+    /*Skille sektion + kontaktform overskrift*/
+
+    .banner h2,
+    .section-contactform h2 {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /*Scenarie information sektion*/
+
+    .scenario-info-container {
+        max-width: 100%;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .scenario-info-container h2 {
+        font-size: 22px;
+        text-align: center;
+        margin: -60px 0 30px 0;
+        max-width: 80%;
+    }
+
+    .scenario-info-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .scenario-info-icon {
+        max-width: 80px;
+        order: 2;
+        
+    }
+
+    .scenario-info-icon-scenario {
+        max-width: 100px;
+        margin-right: 0;
+    }
+
+    .scenario-info-text {
+        order: 1;
+    }
+
+    .scenario-info-text h3 {
+        font-size: 20px;
+    }
+
+    /*Scenarie*/
+
+    .stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .stage img {
+        width: 100%;
+        max-width: 200px;
+        margin: 16px 0;
+    }
+
+    .stage h2 {
+        font-size: 35px;
+    }
+
+    .stage h3 {
+        font-size: 30px;
+    }
+
+    /*Footer*/
+
+    footer:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 200px;
+        margin-bottom: 40px;
     }
 
 }
