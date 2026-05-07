@@ -213,6 +213,7 @@ body {
   font-family: "League Spartan";
   font-size: 24px;
   font-weight: 300;
+  font-weight: 700;
   color: #000000;
   padding: 10px 30px 0 30px;
 }
@@ -343,6 +344,58 @@ body {
   color: #000000;
 }
 
+/* Socials sektion */
+.socials {
+  background-color: #FFE53B;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 40px 40px 0 0;
+}
+
+.socials-container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.socials h3 {
+  font-family: "League Spartan";
+  font-size: 35px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.socials p {
+  font-family: "Nunito";
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+.socials-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials-icons a {
+  font-size: 70px;
+  text-decoration: none;
+}
+
+.socials-icons .fa-instagram {
+  color: #384767;
+}
+
+.socials-icons .fa-facebook {
+  color: #384767;
+}
+
+.socials-icons .fa-envelope {
+  color: #384767;
+}
+
 /* Phishing scenarie */
 .scenario-main {
   background-color: #384767;
@@ -374,26 +427,25 @@ body {
 }
 
 .stage {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
   padding: 60px;
   max-width: 80%;
   margin: 0 auto;
+  gap: 20px;
 }
 
 .stage img {
-  grid-column: 1;
-  grid-row: 1/-1;
-  order: 1;
   width: 100%;
-  max-width: 450px;
-  align-self: center;
-  justify-self: center;
+  max-width: 200px;
+  margin: 10px 0;
 }
 
-.stage h2, .stage h3, .stage p, .stage button {
-  grid-column: 2;
+.stage-ikon i {
+  font-size: 180px;
+  color: #C5D6F9;
 }
 
 .stage h2 {
@@ -410,6 +462,7 @@ body {
   font-family: "Nunito";
   font-size: 20px;
   text-align: left;
+  max-width: 600px;
 }
 
 .stage button {
@@ -435,6 +488,9 @@ body {
 .phishing-info {
   background-color: #FFFBF0;
   padding: 60px 20px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
   border-radius: 40px 40px 40px 40px;
 }
@@ -696,7 +752,7 @@ footer:nth-of-type(2) p {
     background-color: #384767;
   }
   #menu.active {
-    display: none;
+    display: flex;
   }
   /*Hero*/
   .hero-container {
@@ -764,23 +820,27 @@ footer:nth-of-type(2) p {
   }
   /*Scenarie*/
   .stage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 30px 20px;
     max-width: 100%;
-    text-align: center;
   }
-  .stage img {
-    width: 100%;
-    max-width: 200px;
-    margin: 16px 0;
+  .stage-ikon i {
+    font-size: 120px;
   }
   .stage h2 {
-    font-size: 35px;
+    font-size: 28px;
   }
   .stage h3 {
     font-size: 30px;
+  }
+  /*Socials sektion*/
+  .socials-container {
+    max-width: 90%;
+  }
+  .socials h3 {
+    font-size: 22px;
+  }
+  .socials-icons a {
+    font-size: 50px;
   }
   /*Footer*/
   footer:nth-of-type(1) {

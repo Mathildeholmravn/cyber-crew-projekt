@@ -106,20 +106,20 @@ case "Du bliver mistænksom og fortryder dit valg. Du lukker hurtigt browseren n
         imgPath = "img/forstørrelsesglasscenarie.png";
         break; 
 
-/* Rød afslutning: De blev phisked! */
+/* Rød afslutning */
 case "Du indtaster de nødvendige oplysninger.":
     h3Text = "PAS PÅ DINE OPLYSNINGER!";
-    pText = "Du har indtastet dine oplysninger og hackerne kan nu logge ind på dine konto og misbruge dine personlige oplysninger.\n\nDu kan begrænse skaden ved at:\n• Skifte dine kodeord med det samme\n• Kontakte support og Statens Uddannelsesstøtte\n• Anmelde phising-angrebet\n\nSelv hvis du laver fejl, kan du stadig nå at reagere. Bliv en del af Cyber Crew. Sammen passer vi på hinanden."
+    pText = "Du har indtastet dine oplysninger og hackerne kan nu logge ind på dine konto og misbruge dine personlige oplysninger. Du kan begrænse skaden ved at: Skifte dine kodeord med det samme, kontakte support og Statens Uddannelsesstøtte og anmelde phising-angrebet. Selv hvis du laver fejl, kan du stadig nå at reagere. Bliv en del af Cyber Crew. Sammen passer vi på hinanden."
     btnsText = ["START FORFRA"];
     imgPath = "img/forstørrelsesglasscenarie.png";
     break;
 
-/* Orange afslutning: De blev phisked! */
+/* Orange afslutning */
 case "E-mailen virker mistænkelig - Jeg ignorerer den bare.":
 case "Jeg har ikke tænkt mig at åbne dette link!Jeg ignorerer mailen og kommer videre med min dag.":
 case "Jeg ignorerer mailen og kommer videre med min dag.":
     h3Text = "DU ER SIKKER!";
-    pText = "Du er stadig sikker! Men dine medstuderende er måske ikke.\n\nHer er nogle tips:\n• Husk at være skeptisk over for mails der presser dig\n• Check altid afsenderens e-mail adresse\n• Se efter stavefejl og autogenereret sprog\n\nBliv en del af Cyber Crew. Sammen passer vi på hinanden.";
+    pText = "Du er stadig sikker! Men dine medstuderende er måske ikke. Her er nogle tips:\n• Husk at være skeptisk over for mails der presser dig. Check altid afsenderens e-mail adresse. Se efter stavefejl og autogenereret sprog. Bliv en del af Cyber Crew i dag! Sammen passer vi på hinanden.";
     btnsText = ["START FORFRA"];
     imgPath = "img/haenderklapperikonscenarie.png";
     break;
@@ -128,7 +128,7 @@ case "Jeg ignorerer mailen og kommer videre med min dag.":
 /* Grøn afslutning: De blev phisked! */
 case "Forbandet svindlere! Jeg må sørge for at anmelde e-mailen!":
     h3Text = "DU ER SIKKER! GODT KLARET";
-    pText = "Ved at anmelde e-mailen blev phising-kampangen stoppet og du hjalp med at beskytte dine medstuderende!\n\nDu har nu en vigtig rolle i at sikre vores fælles cyber-fremtid.\n\nBliv en del af Cyber Crew. Vi hjælper hinanden til en sikker cyber fremtid.";
+    pText = "Ved at anmelde e-mailen blev phising-kampangen stoppet og du hjalp med at beskytte dine medstuderende! Du har nu en vigtig rolle i at sikre vores fælles cyber-fremtid. Bliv en del af Cyber Crew. Vi hjælper hinanden til en sikker cyber fremtid.";
     btnsText = ["START FORFRA"];
     imgPath = "img/haenderklapperikonscenarie.png";
     break;

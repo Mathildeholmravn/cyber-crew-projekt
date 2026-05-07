@@ -183,6 +183,7 @@ body{
 .info-box-blog h2,
 .info-box-sad-fact h2 {
     @include mixins.h2(24px);
+    font-weight: 700;
     color: variabler.$text-color-black;
     padding: 10px 30px 0 30px;
 }
@@ -282,6 +283,47 @@ body{
         color: variabler.$text-color-black;
 }
 
+/* Socials sektion */
+.socials {
+    background-color: variabler.$accent-color;
+    padding: 60px 20px;
+    text-align: center;
+    @include mixins.section-design-top;
+}
+
+.socials-container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.socials h3 {
+    @include mixins.h3(35px);
+    color: variabler.$text-color-black;
+    margin-bottom: 20px;
+}
+
+.socials p {
+    @include mixins.p;
+    color: variabler.$text-color-black;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.socials-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials-icons a {
+    font-size: 70px;
+    text-decoration: none;
+}
+
+.socials-icons .fa-instagram { color: variabler.$mørke-blå; }
+.socials-icons .fa-facebook  { color: variabler.$mørke-blå; }
+.socials-icons .fa-envelope  { color: variabler.$mørke-blå; }
+
 /* Phishing scenarie */
 .scenario-main {
     background-color: variabler.$mørke-blå;
@@ -308,27 +350,25 @@ body{
 }
 
 .stage{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
     padding: 60px;
     max-width: 80%;
     margin: 0 auto;
-
+    gap: 20px;
 }
 
-.stage img{
-    grid-column: 1;
-    grid-row: 1/-1;
-    order: 1;
+.stage img {
     width: 100%;
-    max-width: 450px;
-    align-self: center;
-    justify-self: center;
+    max-width: 200px;
+    margin: 10px 0;
 }
 
-.stage h2, .stage h3, .stage p, .stage button{
-    grid-column: 2;
+.stage-ikon i {
+    font-size: 180px;
+    color: variabler.$bg-color;
 }
 
 .stage h2{
@@ -341,7 +381,8 @@ body{
 
 .stage p{
     @include mixins.p;
-    text-align: left
+    text-align: left;
+    max-width: 600px;
 }
 
 .stage button{
@@ -356,6 +397,9 @@ body{
 .phishing-info{
     background-color: variabler.$primary-color;
     padding: 60px 20px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
     @include mixins.section-design-top-bottom;
 }
 
@@ -588,7 +632,7 @@ footer:nth-of-type(2){
     }
 
     #menu.active{
-        display: none;
+        display: flex;
     }
 
       /*Hero*/
@@ -676,26 +720,34 @@ footer:nth-of-type(2){
     /*Scenarie*/
 
     .stage {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         padding: 30px 20px;
         max-width: 100%;
-        text-align: center;
     }
 
-    .stage img {
-        width: 100%;
-        max-width: 200px;
-        margin: 16px 0;
+    .stage-ikon i {
+        font-size: 120px;
     }
 
     .stage h2 {
-        font-size: 35px;
+        font-size: 28px;
     }
 
     .stage h3 {
         font-size: 30px;
+    }
+
+    /*Socials sektion*/
+
+    .socials-container {
+        max-width: 90%;
+    }
+
+    .socials h3 {
+        font-size: 22px;
+    }
+
+    .socials-icons a {
+        font-size: 50px;
     }
 
     /*Footer*/
